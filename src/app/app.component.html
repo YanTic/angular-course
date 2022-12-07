@@ -6,3 +6,29 @@ String Interpolation
 <!--Data binding-->
 <input type="text" [(ngModel)] = "title">
 {{ title }}
+
+<!-- ngIf -->
+<div *ngIf="title === 'nicolas'">
+  Este es un div
+</div>
+
+
+<button (click)="addItem()" >Add item</button>
+
+<!-- ngFor -->
+<ul>
+  <li *ngIf="items.length === 0">Lista vacia</li>
+  <li *ngFor="let name of items; index as i">
+    {{ name }} {{ i }}
+
+    <button (click)="deleteItem(i)">Delete item</button>
+  </li>
+</ul>
+
+
+<div *ngFor="let product of products">
+  {{ product.title }}
+  <!-- <img src="{{ product.image }}" alt="img"/> -->
+  <img [src]="product.image" alt="img"/>
+  {{ product.price }}
+</div>

@@ -12,6 +12,13 @@ String Interpolation
   Este es un div
 </div>
 
+<!-- ngSwitch -->
+<div [ngSwitch]="title">
+  <p *ngSwitchCase="'nicolas'">Este es nicolas</p>
+  <p *ngSwitchCase="'julian'">Este es julian</p>
+  <p *ngSwitchCase="'sara'">Esta es sara</p>
+  <p *ngSwitchDefault>No hay match</p>
+</div>
 
 <button (click)="addItem()" >Add item</button>
 

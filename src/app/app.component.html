@@ -33,9 +33,17 @@ String Interpolation
 </ul>
 
 
-<div *ngFor="let product of products">
+<!-- <div *ngFor="let product of products">
   {{ product.title }}
-  <!-- <img src="{{ product.image }}" alt="img"/> -->
   <img [src]="product.image" alt="img"/>
   {{ product.price }}
+</div> -->
+<!-- <img src="{{ product.image }}" alt="img"/> -->
+
+
+<div class="product-grid">
+  <app-product *ngFor="let product of products" (productClicked)="clickProduct($event)" 
+    [product]="product">
+  </app-product>  
 </div>
+

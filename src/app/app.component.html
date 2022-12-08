@@ -41,6 +41,10 @@ String Interpolation
 <!-- <img src="{{ product.image }}" alt="img"/> -->
 
 
+<input type="text" [(ngModel)]="power">
+{{ power | exponential }}
+
+
 <div class="product-grid">
   <app-product *ngFor="let product of products" (productClicked)="clickProduct($event)" 
     [product]="product">

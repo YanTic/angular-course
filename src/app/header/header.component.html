@@ -1,1 +1,11 @@
-<p>header works!</p>
+<nav>
+    <!-- Angular se utiliza mas que todo para usar el single-page, solo se recarga
+         lo que se necesita y no la pagina entera, al usar 'href' recargamos la
+         pagina cada vez que se hace la redirección. Para solucionar esto se usa
+         'routerLink' -->
+    <!-- <a href="/products">Products</a> -->
+
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/products" routerLinkActive="active">Products</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+</nav>

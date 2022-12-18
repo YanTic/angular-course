@@ -7,10 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-    declarations: [
-        BannerComponent,
-        HomeComponent
-    ],
+    declarations: [BannerComponent, HomeComponent],
     imports: [CommonModule, HomeRoutingModule, SharedModule]
 })
 export class HomeModule { }
